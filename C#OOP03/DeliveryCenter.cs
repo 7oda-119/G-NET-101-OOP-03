@@ -4,7 +4,8 @@
     {
         Shipment[] shipments;
         public string CenterName { get; set; }
-       
+        public Driver DriverInfo { get; set; }
+
         public DeliveryCenter(string centerName)
         {
             CenterName = centerName;
@@ -92,5 +93,10 @@
                 Console.WriteLine("No shipments stored in this center.");
         }
         #endregion
+
+        public void AssignDriver(Driver driver)
+        {
+            DriverInfo = driver;
+        }
     }
 }
