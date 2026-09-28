@@ -18,7 +18,7 @@
             }
         }
 
-        public override decimal EstimatedCost => base.EstimatedCost + ExtraFee;
+        public override decimal EstimatedCost => base.EstimatedCost + ExtraFee;  // Adde from Assignment02
 
     }
 }
