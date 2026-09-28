@@ -7,5 +7,11 @@
         }
 
         public override decimal EstimatedCost => base.EstimatedCost;
+
+        public override void PrintShipment()
+        {
+            Console.WriteLine("=== standard Shipment Details ===");
+            base.PrintShipment();
+        }
     }
 }

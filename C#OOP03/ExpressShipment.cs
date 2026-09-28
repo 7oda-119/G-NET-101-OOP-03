@@ -20,5 +20,12 @@
 
         public override decimal EstimatedCost => base.EstimatedCost + ExtraFee;  // Adde from Assignment02
 
+        public override void PrintShipment()
+        {
+            Console.WriteLine("=== Express Shipment Details ===");
+            base.PrintShipment();
+            Console.WriteLine($"ExtraFee: {ExtraFee}");
+        }
+
     }
 }

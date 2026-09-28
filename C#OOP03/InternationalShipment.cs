@@ -30,5 +30,13 @@
             CustomsFee = customsFee;
         }
 
+        public override void PrintShipment()
+        {
+            Console.WriteLine("=== International Shipment Details ===");
+            base.PrintShipment();
+            Console.WriteLine($"DestinationCountry: {DestinationCountry}");
+            Console.WriteLine($"CustomsFee: {CustomsFee}");
+        }
+
     }
 }
