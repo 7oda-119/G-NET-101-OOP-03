@@ -4,7 +4,7 @@
     {
         Shipment[] shipments;
         public string CenterName { get; set; }
-
+       
         public DeliveryCenter(string centerName)
         {
             CenterName = centerName;
@@ -83,14 +83,14 @@
             {
                 if (shipments[i] != null)
                 {
-                    Console.WriteLine($"== Shipment number {i + 1} ==");
+                    Console.WriteLine($"****** Shipment number {i + 1} ******");
                     shipments[i].PrintShipment();
                     hasShipment = true;
                 }
             }
             if (!hasShipment)
                 Console.WriteLine("No shipments stored in this center.");
-        } 
+        }
         #endregion
     }
 }
