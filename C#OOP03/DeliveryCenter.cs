@@ -75,7 +75,8 @@
             return false;
         }
 
-        public void PrintAllShipments()
+        #region Question05
+        public void PrintAllShipments()   // Modified in previous Assignment
         {
             bool hasShipment = false;
             for (int i = 0; i < shipments.Length; i++)
@@ -89,6 +90,7 @@
             }
             if (!hasShipment)
                 Console.WriteLine("No shipments stored in this center.");
-        }
+        } 
+        #endregion
     }
 }
