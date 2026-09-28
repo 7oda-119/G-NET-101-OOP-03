@@ -88,7 +88,7 @@
         }
 
         // Calculated Properity
-        public virtual decimal EstimatedCost   // Add the virtual keyword so the property can be overridden
+        public virtual decimal EstimatedCost    // Add the virtual keyword to EstimatedCost so the property can be overridden
         {
             get => (decimal)(deliveryFee + (weight * 5));
         }
@@ -106,7 +106,7 @@
                 DeliveryFee = (double)newFee;
         }
 
-        public void PrintShipment()
+        public virtual void PrintShipment()        // Add the virtual keyword to PrintShipment so the method can be overridden
         {
             Console.WriteLine($"TracingCode: {TrackingCode}");
             Console.WriteLine($"Description: {Description}");
@@ -118,5 +118,15 @@
         }
         #endregion
 
+        #region UpdateWeight
+        public void UpdateWeight(double weight)
+        {
+            Weight = weight;
+        }
+        public void UpdateWeight(double weight, double packingWeigh)
+        {
+            Weight = weight + packingWeigh;
+        } 
+        #endregion
     }
 }
