@@ -24,7 +24,7 @@
         }
 
         public override decimal EstimatedCost => base.EstimatedCost + CustomsFee;
-        public InternationalShipment(string trackingCode, string description, double weight, double deliveryFee, DeliveryAddress destination, string destinationCountry, decimal customsFee) : base(trackingCode, description, weight, deliveryFee, destination)
+        public InternationalShipment(string trackingCode, string description, double weight, double deliveryFee, DeliveryAddress destination, string destinationCountry, decimal customsFee) : base(trackingCode, description, weight, deliveryFee, destination)  //Added from previous Assignment
         {
             DestinationCountry = destinationCountry;
             CustomsFee = customsFee;
